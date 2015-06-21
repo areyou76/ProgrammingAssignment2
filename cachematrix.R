@@ -3,7 +3,8 @@
 ## makeCacheMatrix
 ## This function creates a special "matrix" object that can cache its inverse.
 
-## makeCacheMatrix creates a list containing a function to
+## makeCacheMatrix creates a list containing a function as follow:
+
 ## 1. set the value of the matrix
 ## 2. get the value of the matrix
 ## 3. set the value of inverse of the matrix
@@ -27,9 +28,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## cacheSolve
-## The following function returns the inverse of the matrix. It first checks if
-## the inverse has already been computed. If so, it gets the result and skips the
-## computation. If not, it computes the inverse, sets the value in the cache via
+## The following function returns the inverse of the matrix. Firstly, it will checks if
+## the inverse has already been computed. Then, it will gets the result and skips the
+## computation. If not, it will computes the inverse, sets the value in the cache via
 ## setinverse function.
 
 
@@ -67,7 +68,7 @@ cacheSolve <- function(x, ...) {
 
 ##-----------------------------------------------------
 
-## Output test:
+## Output testing:
 
 ## > x = rbind(c(1, -2/4), c(-2/4, 1))
 ## > t = makeCacheMatrix(x)
